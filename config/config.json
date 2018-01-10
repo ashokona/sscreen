@@ -1,0 +1,13 @@
+{
+    "nodemailer": {
+        "email": "anyday@acmesoftware.net",
+        "password": "Reset123!",
+        "sender": "noreply@anydayemployment.com",
+        "host": "mx1.hostinger.in",
+        "port": 587
+    },
+    "twilio": {
+        "accountSid": "AC0ec64859109179d531bdc2679ecfec68",
+        "authToken": "9c25b48b9370f98f9ffe6080e23d456e"
+    }
+}

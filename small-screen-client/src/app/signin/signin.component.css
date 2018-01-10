@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+
+.ui-messages {
+    border: 1px solid !important;
+    margin: .5em 0 !important;
+    padding: 1em 1em 1em .5em !important;
+    display: none !important;
+    position: relative !important;
+}
+
+.ui-widget {
+    box-sizing: border-box !important;
+    font-family: "Roboto", "Trebuchet MS", Arial, Helvetica, sans-serif!important;
+    font-size: 1em !important;
+}
+
+.ui-corner-all {
+    -moz-border-radius: 3px!important;
+    -webkit-border-radius: 3px!important;
+    border-radius: 3px!important;
+}
+
+.ui-messages-success {
+    color: #2c832f!important;
+    background-color: #b4f0b6 !important;
+    border-color: #b4f0b6 !important;
+}
+
+.ui-messages-error {
+    background-color: #d9534f !important;
+    border-color: #d9534f !important;
+    color: #fff !important;
+}

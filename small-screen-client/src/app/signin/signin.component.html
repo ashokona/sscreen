@@ -1,0 +1,63 @@
+<div class="wrapper">
+    <div class="page-header" style="background-image: url('../assets/img/smallscreen1.jpg');">
+
+        <div class="filter"></div>
+        <div class="container">
+            <div class="row">
+
+
+
+
+                <div class="col-lg-4 col-sm-6 mr-auto ml-auto">
+                    <div class="card card-register">
+                        <p-messages [(value)]="msgs"></p-messages>
+
+
+                        <h3 class="title">Welcome</h3>
+                        <!-- <div class="social-line text-center">
+                            <a href="#pablo" class="btn btn-neutral btn-facebook btn-just-icon">
+                                <i class="fa fa-facebook-square"></i>
+                            </a>
+                            <a href="#pablo" class="btn btn-neutral btn-google btn-just-icon">
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+                            <a href="#pablo" class="btn btn-neutral btn-twitter btn-just-icon">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                        </div> -->
+                        <form class="register-form" [formGroup]="myForm" novalidate (ngSubmit)="signin()">
+                            <div class="form-group " [class.has-danger]="(!email.valid && !email.pristine)">
+                                <label>Email</label>
+                                <input type="text" class="form-control" [class.form-control-danger]="(!email.valid && !email.pristine)" [ngModel]="user?.email" id="email" formControlName="email" placeholder="Email">
+                                <span [hidden]="!email.valid && (!email.dirty || !email.touched)">
+                                    <div class="form-control-feedback" [hidden]="!email.errors?.required">Sorry, email is required. Enter email</div>
+                                    <div class="form-control-feedback" [hidden]="!email.errors?.pattern || email.errors?.required">Sorry, invalid email. Enter Valid Email</div>
+                                </span>
+                            </div>
+
+                            <div class="form-group " [class.has-danger]="(!password.valid && !password.pristine)">
+                                <label>Password</label>
+                                <input type="password" class="form-control" [class.form-control-danger]="(!password.valid && !password.pristine)" [ngModel]="user?.password" id="password" formControlName="password" placeholder="Password">
+                                <span [hidden]="!password.valid && (!password.dirty || !password.touched)">
+                                    <div class="form-control-feedback" [hidden]="!password.errors?.required">Sorry, password is required. Enter password</div>
+                                    <div class="form-control-feedback" [hidden]="!password.errors?.minlength || password.errors?.required">Sorry, password must contain 6 letters</div>
+                                </span>
+                            </div>
+
+                            <button class="btn btn-danger btn-block btn-round" [disabled]="!myForm.valid || (signinButton==='loading...')">{{signinButton}}</button>
+                        </form>
+                        <div class="forgot">
+                            <a [routerLink]="['/forgotpassword']" class="btn btn-link btn-danger">Forgot password?</a>
+                        </div>
+                        <div class="forgot">
+                            <a [routerLink]="['/signup']" class="btn btn-link btn-danger">Sign Up</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer register-footer text-center">
+                <h6>&copy;{{test | date: 'yyyy'}}, <i class="fa fa-film heart"></i> by SmallScreen</h6>
+            </div>
+        </div>
+    </div>
+</div>
